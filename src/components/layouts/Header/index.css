@@ -1,0 +1,28 @@
+.header {
+	height: 56px;
+	z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    min-width: 967px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+    background-color: #fff;
+}
+
+.logo {
+	
+}
+
+.btnPanel {
+
+}
+
+.modulePanel {
+	
+}
+
+.controlPanel {
+	
+}

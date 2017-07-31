@@ -1,0 +1,70 @@
+/* _core.css for WAP */
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none; 
+	/*-webkit-perspective: 1000;*//*会导致ios fixed出问题*/
+	/*以下导致了ios的fixed失效*/
+	/*-webkit-touch-callout: none; 
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform-style: preserve-3d;
+ 	-webkit-backface-visibility: hidden;*/
+}
+html,body{min-height:100%}
+html,body,button,input,select,textarea{font:14px/1.5 arial,Microsoft YaHei,\5b8b\4f53;color:#333}
+input,select,textarea{font-size:100%}
+@media screen and (min-width:480px){
+	html,body,button,input,select,textarea{font-size:18px}
+}
+@media screen and (min-width:640px){
+	html,body,button,input,select,textarea{font-size:24px}
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+
+table{border-collapse:collapse;border-spacing:0}
+th{text-align:inherit}
+fieldset,img{border:0}
+iframe{display:block}
+abbr,acronym{border:0;font-variant:normal}
+del{text-decoration:line-through}
+address,caption,cite,code,dfn,em,th,var,i,b{font-style:normal;font-weight:500}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6,b{font-size:100%;font-weight:500}
+q:before,q:after{content:''}
+a{text-decoration:none}
+a:hover{text-decoration:underline;}
+
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:"\20 ";clear:both;height:0}
+.clearfix{zoom:1}
+
+.hide{display:none}
+.hide2{visibility:hidden}
+.hide3{position:absolute;left:-99999px;top:-99999px}
+
+.l{float:left;}
+.r{float:right;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.di{display:inline;}
+.db{display:block;}
+.dib{display:inline-block;}
+.mC{margin: 0 auto;}
+.tC{text-align: center;}
+.lil li{float: left;}
+
+.cS{border:none;outline: none;background:none;resize:none;}
+
+.nowrap{white-space:nowrap;word-break:keep-all}
+.wbk{white-space:normal;word-break:break-all}
+.toh{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;word-break:keep-all;word-wrap:normal}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+	border-radius: 1px;
+}
