@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 
 import baseStyles from '../../../res/lib/css/base.css';
 import styles from './index.css';
@@ -17,11 +18,17 @@ function Index() {
 				<ModuleList />
 			</div>
 			
-			<div className={`${styles.controlPanel} ${baseStyles.l} ${baseStyles.clearfix}`}>
-				<a href="javascript:void(0);" className={baseStyles.l}>保存</a>
-				<a href="javascript:void(0);" className={baseStyles.l}>预览</a>
-				<a href="javascript:void(0);" className={baseStyles.l}>关闭</a>
-			</div>
+			<ul className={`${styles.controlPanel} ${baseStyles.r} ${baseStyles.clearfix}`}>
+				<li className={baseStyles.l}>
+					<Button type="primary">保存</Button>
+				</li>
+				<li className={baseStyles.l}>
+					<Button type="primary">预览</Button>
+				</li>
+				<li className={baseStyles.l}>
+					<Button type="primary">关闭</Button>
+				</li>
+			</ul>
 		</div>
 		)
 }

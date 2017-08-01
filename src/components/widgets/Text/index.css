@@ -1,0 +1,23 @@
+.eleText {
+    width: 318px;
+    height: 31.8px;
+    top: 120px;
+    left: 30px;
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+    line-height: 31.8px;
+    letter-spacing: 0em;
+    opacity: 1;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    display: block;
+    animation: none;
+    border: 1px dashed rgb(102, 102, 102);
+}
+
+.btn {
+    margin-left: 20px;
+}

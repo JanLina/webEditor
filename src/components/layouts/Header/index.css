@@ -16,13 +16,16 @@
 }
 
 .btnPanel {
-
+    margin-top: 12px;
 }
 
 .modulePanel {
-	
+	margin-top: 12px;
 }
 
 .controlPanel {
-	
+	margin-top: 12px;
+}
+.controlPanel li {
+    margin-right: 10px;
 }
