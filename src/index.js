@@ -12,6 +12,7 @@ app.model(require('./components/layouts/Editor/model.js'));
 app.model(require('./components/layouts/Toolbar/BtnList/model.js'));
 app.model(require('./components/widgets/Text/model.js'));
 
+
 // 4. Router
 app.router(require('./router'));
 

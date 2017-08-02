@@ -7,7 +7,7 @@ import styles from './index.css';
 function Index(props) {
 	return (
 		<ul>
-			<li><Button type="default" onClick={props.handleClickText}>文本</Button></li>
+			<li><Button type="default" onClick={props.addText}>文本</Button></li>
 		</ul>
 		)
 }
@@ -18,7 +18,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        handleClickText() {
+        addText() {
             dispatch({
                 type: 'editor/addText'
             });
