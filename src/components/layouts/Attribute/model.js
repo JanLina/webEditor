@@ -1,12 +1,12 @@
 export default {
-    namespace: 'editorWrapper',
+    namespace: 'attribute',
 
     state: {
-       
+	
     },
 
     effects: {
-
+        
     },
 
     reducers: {

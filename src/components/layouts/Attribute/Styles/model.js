@@ -1,15 +1,15 @@
 export default {
-    namespace: 'text',
+    namespace: 'styles',
 
     state: {
-		 
+
     },
 
     effects: {
-        
+
     },
 
     reducers: {
-
+    	
     }
 }

@@ -1,0 +1,10 @@
+.right {
+	min-width: 290px;
+	height: 100%;
+	position: fixed;
+	z-index: 3;
+	top: 56px;
+	right: 0;
+	background-color: #f0f0f0;
+	border-left: 1px solid #bbb;
+}

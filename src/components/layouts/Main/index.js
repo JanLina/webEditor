@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'dva';
 import { Tabs } from 'antd';
 
 import baseStyles from '../../../res/lib/css/base.css';
@@ -6,11 +7,8 @@ import styles from './index.css';
 import Pages from '../Page/Pages';
 import Modals from '../Page/Modals';
 import Editor from '../Editor';
-import Styles from '../Attribute/Styles';
-import Animations from '../Attribute/Animations';
-import Events from '../Attribute/Events';
 
-function Index() {
+function Index(props) {
 	const TabPane = Tabs.TabPane;	
 
 	let handleChangePage = key => {
@@ -40,22 +38,14 @@ function Index() {
 				</div>
 			</div>
 			<div className={`${styles.right} ${baseStyles.pa}`}>
-				<div className={styles.attributePanel}>
-					<Tabs defaultActiveKey="styles" onChange={handleChangeAttribute}>
-						<TabPane tab="文本" key="styles">
-							<Styles />
-						</TabPane>
-					    <TabPane tab="动画" key="animations">
-					    	<Animations />
-					    </TabPane>
-					    <TabPane tab="点击" key="events">
-					    	<Events />
-					    </TabPane>
-					</Tabs>
-				</div>
+				
 			</div>
 		</div>
 		)
 }
 
-export default Index;
+function mapStateToProps(state) {
+	return state.main;
+}
+
+export default connect(mapStateToProps)(Index);
