@@ -29,6 +29,10 @@ function Index(props) {
 		var mouseLeft = e.pageX;
 		console.log(top, left, mouseTop, mouseLeft);
 	}
+	var handleDrag = function(e) {
+		e.preventDefault();
+		console.log('drag')
+	}
 	var handleDragEnd = function(e) {
 		e.preventDefault();
 		console.log('drag end')
@@ -51,6 +55,7 @@ function Index(props) {
 		<div>
 			<div draggable="true" 
 				 onDragStart={handleDragStart} 
+				 onDrag={handleDrag}
 				 onDragEnd={handleDragEnd} 
 				 dangerouslySetInnerHTML={{__html: props.data.content}} 
 				 className={styles.eleText} style={textStyle} 
