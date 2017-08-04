@@ -5,6 +5,14 @@ export default {
             image: 0
         },
         text: [
+            {
+              name: '顶部距离',
+              key: 'top'
+            },
+            {
+              name: '左边距离',
+              key: 'left'
+            },
           	{
           		name: '文本字体',
           		key: 'fontFamily'

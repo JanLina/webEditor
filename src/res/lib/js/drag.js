@@ -55,3 +55,5 @@ var startDrag = function(bar, target, callback){
 		}
 	}	
 };
+
+export default startDrag;

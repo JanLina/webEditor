@@ -11,7 +11,7 @@ export default {
             image: -1
         },
         text: [
-          
+
         ],
         image: [
 
@@ -26,11 +26,12 @@ export default {
     	addText(state, action) {
     		console.log('Dispatch "editor/addText"');
 
-            var newState = JSON.stringify(state);
-            newState = JSON.parse(newState);
+            var newState = deepCopyState(state);
             newState.count.text += 1;
             newState.activeIndex.text = newState.count.text - 1;
             newState.text.push({
+                top: 0,
+                left: 0,
                 content: '输入文本',
                 fontWeight: 'normal',
                 textAlign: 'left',
@@ -42,8 +43,7 @@ export default {
         deleteText(state, action) {
             console.log('Dispatch "editor/deleteText"');
 
-            var newState = JSON.stringify(state);
-            newState = JSON.parse(newState);
+            var newState = deepCopyState(state);
             newState.count.text -= 1;
             newState.text.splice(action.payload.index, 1);
 
@@ -51,8 +51,8 @@ export default {
         },
         showTextAttribute(state, action) {
             console.log('Dispatch "editor/showTextAttribute"');
-            var newState = JSON.stringify(state);
-            newState = JSON.parse(newState);
+
+            var newState = deepCopyState(state);
             newState.activeIndex.text = action.payload.index;
             return {...state, ...newState};
         },
@@ -62,14 +62,8 @@ export default {
             var payload = action.payload,
                 index = payload.index,
                 type = payload.type,
-                newState,
-                thisText;
-
-            console.log('index: ' + index + '  type: ' + type);
-
-            newState = JSON.stringify(state);
-            newState = JSON.parse(newState);
-            thisText = newState.text[index];
+                newState = deepCopyState(state),
+                thisText = newState.text[index];
 
             switch(type) {
                 case 'fontWeight':
@@ -90,4 +84,8 @@ export default {
             return {...state, ...newState}; 
         }
     }
+}
+
+function deepCopyState(state) {
+    return JSON.parse(JSON.stringify(state));
 }

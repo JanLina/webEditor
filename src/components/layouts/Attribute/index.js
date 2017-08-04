@@ -8,9 +8,9 @@ import Animations from './Animations';
 import Events from './Events';
  
 function Index(props) {
+	const TabPane = Tabs.TabPane;
 	var textStyle = props.textStyle,
 		index = props.index;
-	const TabPane = Tabs.TabPane;
 	return (
 		<div className={styles.right}>
 			<Tabs defaultActiveKey="styles">

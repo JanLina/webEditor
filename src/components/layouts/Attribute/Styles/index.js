@@ -17,11 +17,13 @@ function Index(props) {
 		}
 		h = target.innerHTML;
 
+		console.log('h: ' + h)
+
 		switch (h) {
 			case '左对齐':
 				align = 'left';
 				break;
-			case '居中':
+			case '居 中':
 				align = 'center';
 				break;
 			case '右对齐':
@@ -30,6 +32,8 @@ function Index(props) {
 			default:
 				break;
 		}
+
+		console.log('align: ' + align)
 
 		props.handleTextEdit(index, 'textAlign', align);
 	}
