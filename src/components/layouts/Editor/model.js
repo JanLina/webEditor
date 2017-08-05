@@ -1,22 +1,61 @@
 export default {
     namespace: 'editor',
 
+    // state: {
+    //     count: {
+    //         text: 0,
+    //         image: 0
+    //     },
+    //     activeIndex: {
+    //         text: -1,
+    //         image: -1
+    //     },
+    //     text: [
+
+    //     ],
+    //     image: [
+
+    //     ]
+    // },
+
     state: {
-        count: {
-            text: 0,
-            image: 0
+        {
+            name: 'base/Text',
+            params: {
+                content: '<p>双击<b>输入</b>文本</p>'
+            },
+            position: {
+                x: 0,
+                y: 0
+            },
+            effect: {
+                name: 'slide',
+                attr: ''
+            },
+            style: {
+                width: '50px',
+                fontFamily: '微软雅黑',
+                fontWeight: 'normal',
+                fontSize: '14px',
+                textAlign: 'left'
+            }
         },
-        activeIndex: {
-            text: -1,
-            image: -1
-        },
-        text: [
-
-        ],
-        image: [
-
-        ]
-    },
+        {
+            name: 'base/Image',
+            position: {
+                x: 0,
+                y: 0
+            },
+            effect: {
+                name: 'slide',
+                attr: ''
+            },
+            style: {
+                width: '50px',
+                height: '50px'
+            }
+        }
+    }
 
     effects: {
 
