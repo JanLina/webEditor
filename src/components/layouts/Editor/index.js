@@ -1,37 +1,32 @@
 import React from 'react';
 import { connect } from 'dva';
+// import Draggable from 'react-draggable'; 
 
 import styles from './index.css';
-import Text from '../../widgets/Text';
- 
-function Index(props) {
-	console.log(props.activeIndex.text);
+import PreviewPopup from '../PreviewPopup';
+import Text from '../../modules/base/Text';
 
-	var handleDragEnter = function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		console.log('drag enter');
+function Index(props) {
+
+	// 根据模板的 config.js 初始化 editor
+	var template = require('../../../templates/' + props.template + '/config.js'),
+		initModules = template.modules;
+	if (props.inited === false) {
+		props.init(initModules);
 	}
-	var handleDragOver = function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		console.log('drag over');
-	}
-	var handleDrop = function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		console.log('drop');
-	}
-	
 
 	return (
-		<div className={styles.editor} 
-			 onDragEnter={handleDragEnter} 
-			 onDragOver={handleDragOver} 
-			 onDrop={handleDrop}>
-			<div className={styles.wrap}>
-				{ props.text.map((item, i) => <Text data={item} key={i} index={i} isActive={props.activeIndex.text === i} />) }
+		<div className={styles.editor}>
+			<div className={styles.wrap} id="wrapper">
+				{ 
+					props.module.map((item, i) => {
+						if (item.name === 'base/Text') {
+							return <Text data={item} key={i} index={i} isActive={props.activeIndex === i} />;
+						}
+					}) 
+				}
 			</div>
+			{ props.previewing && <PreviewPopup dataSource={props.module} /> }
 		</div>
 		)
 }
@@ -39,5 +34,17 @@ function Index(props) {
 function mapStateToProps(state) {
     return state.editor;
 } 
+function mapDispatchToProps(dispatch) {
+	return {
+		init(initModules) {
+			dispatch({
+				type: 'editor/init',
+				payload: {
+					initModules: initModules
+				}
+			})
+		}
+	}
+}
 
-export default connect(mapStateToProps)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

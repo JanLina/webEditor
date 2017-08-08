@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'dva';
 
-import baseStyles from '../../../res/lib/css/base.css';
+import baseStyles from '../../../assets/res/lib/css/base.css';
 import styles from './index.css';
 import Header from '../Header';
 import Main from '../Main';
@@ -19,7 +19,6 @@ function Index(props) {
 export default Index;
 
 // function mapStateToProps(state) {
-// 	console.log('@frame state:',state);
 //     return state.frame;
 // }
 

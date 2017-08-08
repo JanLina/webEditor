@@ -1,0 +1,16 @@
+.wrapper {
+	width: 410px;
+    height: 670px;
+    position: relative;
+    background: #FFF;
+    box-shadow: 0 0 6px #a9a9a9;
+    transition: 0.2s;
+    transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    box-shadow: 0 0 20px #c1c1c1;
+    background-color:#ffffff;
+    background-image:url("//2391529.s50i-2.faiusr.com/2/107/ADIIABACGAAgseasygUoxNjkywYw8QU4uQk.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:50% 50%;
+}

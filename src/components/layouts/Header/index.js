@@ -1,13 +1,13 @@
 import React from 'react';
+import {connect} from 'dva';
 import { Button } from 'antd';
 
-import baseStyles from '../../../res/lib/css/base.css';
+import baseStyles from '../../../assets/res/lib/css/base.css';
 import styles from './index.css';
 import BtnList from '../Toolbar/BtnList';
 import ModuleList from '../Toolbar/ModuleList';
 
-function Index() {
-
+function Index(props) {
 	return (
 		<div className={`${styles.header} ${baseStyles.clearfix}`}>
 			<div className={`${styles.logo} ${baseStyles.l}`}>logo</div>
@@ -23,7 +23,7 @@ function Index() {
 					<Button type="primary">保存</Button>
 				</li>
 				<li className={baseStyles.l}>
-					<Button type="primary">预览</Button>
+					<Button type="primary" onClick={props.preview}>预览</Button>
 				</li>
 				<li className={baseStyles.l}>
 					<Button type="primary">关闭</Button>
@@ -33,4 +33,17 @@ function Index() {
 		)
 }
 
-export default Index;
+function mapStateToProps(state) {
+	return state.header;
+}
+function mapDispatchToProps(dispatch) {
+	return {
+		preview() {
+			dispatch({
+				type: 'editor/preview'
+			});
+		}
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

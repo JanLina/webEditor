@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Tabs } from 'antd';
 
-import baseStyles from '../../../res/lib/css/base.css';
+import baseStyles from '../../../assets/res/lib/css/base.css';
 import styles from './index.css';
 import Pages from '../Page/Pages';
 import Modals from '../Page/Modals';

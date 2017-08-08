@@ -1,8 +1,6 @@
 .eleText {
     width: 318px;
-    /*top: 120px;
-    left: 30px;*/
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     color: rgb(102, 102, 102);
     font-size: 16px;
@@ -15,6 +13,9 @@
     display: block;
     animation: none;
     border: 1px dashed rgb(102, 102, 102);
+}
+.uneditableText {
+    border: none;
 }
 
 .btn {
